@@ -11,5 +11,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  Id1;
+  
+  headers = ['Id','FirstName','LastName','City'];
+  rows = [{Id : "1" , FirstName :"Mohammad" , LastName : "Moradi" , City : "Sisakht" } ,
+  {Id : "2" , FirstName :"Ali" , LastName : "Hekmati" , City : "Shahreza" }
+
+
+]
 }

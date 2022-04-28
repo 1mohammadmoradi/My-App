@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component, Input, OnInit } from '@angular/core';
+ 
+
 
 @Component({
   selector: 'app-home',
@@ -6,14 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
- 
-  flage =true;
-
-  constructor() { }
-
-ngOnInit(): void {
-  console.log('flage',this.flage);
-}
+  parentProperty='hi';
+  result;
+  constructor() {
+    
+     
+  
+  }
+  
+  
+  
+  ngOnInit() {
+   
+  }
+  
   
   headers = ['Id','FirstName','LastName','City'];
   rows = [
@@ -25,10 +34,5 @@ ngOnInit(): void {
 
 ]
 
-ngAfterInit() : void {
-
-
-  console.log('flage',this.flage);
-}
 
 }

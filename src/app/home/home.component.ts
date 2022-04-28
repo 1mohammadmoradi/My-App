@@ -1,5 +1,5 @@
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
  
 
 
@@ -8,19 +8,23 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
-  parentProperty='hi';
+export class HomeComponent implements OnInit,OnChanges {
+  @Input() item :any;
   result;
   constructor() {
     
      
   
   }
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('oo', this.item);
+  }
   
   
   
   ngOnInit() {
-   
+    this.result = this.item
+    console.log('oo', this.item);
   }
   
   

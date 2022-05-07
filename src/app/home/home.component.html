@@ -1,6 +1,9 @@
 <p>item : {{item}}</p>
+<p>result : {{result}}</p>
 <div *ngIf="item? item : false">
-
+<div> 
+    <button>ذخیره</button>
+</div>
     <table id="user">
         <tr>
             <th *ngFor = "let column of headers">

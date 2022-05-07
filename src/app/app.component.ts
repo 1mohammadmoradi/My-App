@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
 export class AppComponent {
   
   
-  flage=true;
+  flage= false;
   title = 'My-App4';
   constructor( ) {
      

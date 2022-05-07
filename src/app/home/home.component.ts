@@ -18,12 +18,13 @@ export class HomeComponent implements OnInit,OnChanges {
   }
   ngOnChanges(changes: SimpleChanges): void {
     console.log('oo', this.item);
+    this.result = this.item
   }
   
   
   
   ngOnInit() {
-    this.result = this.item
+    //this.result = this.item
     console.log('oo', this.item);
   }
   

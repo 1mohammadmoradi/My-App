@@ -1,5 +1,9 @@
 
-<button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Open My Modal</button>\
+
+
+
+
+<button class="btn btn-lg btn-outline-primary;" style="margin: 10px; border: solid; border-color: black; color: mediumblue;" (click)="open(mymodal)">Open My Modal</button>
 
 <ng-template #mymodal let-modal>
   <div class="modal-header">
@@ -9,30 +13,37 @@
     </button>
   </div>
   <div class="modal-body">
-    Here I am!
+    <p style="margin-left: 10px;"> Here I am!</p>
+    <div>
+
+      <input style="margin: 10px;" type="text"> <br>
+      <input style="margin: 10px;" type="search">
+    </div>
+    
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
   </div>
 </ng-template>
 
-<div class="container">
-    <ul class="nav nav-tabs">
-      <li class="nav-item" (click)="click()">
-        <a class="nav-link"  routerLink='/home' >Personnal Data</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink='/'>Line Chart</a>
-      </li>
-    </ul>
+<div style="margin: 5px;">
+
+  <ul >
+    <li   (click)="click()">
+      <a style="margin: 10px;border: solid;border-color: black; " class="nav-tabs"  routerLink='/home' >Personnal Data</a>
+    </li>
+    <li  (click)="click()">
+      <a style="margin: 10px;border: solid; border-color: black;" class="nav-tabs" routerLink='/home'>Line Chart</a>
+    </li>
+  </ul>
+</div>
     
-  </div>
 
 
-  <div>
+      <div >
        <app-home [item]="flage">
   
-</app-home>
+        </app-home>
         <!-- <router-outlet>
          
         </router-outlet> -->

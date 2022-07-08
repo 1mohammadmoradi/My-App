@@ -1,19 +1,24 @@
-<p>item : {{item}}</p>
-<p>result : {{result}}</p>
-<div *ngIf="item? item : false">
-<div> 
-    <button>ذخیره</button>
+
+<div style="display: contents;">
+    <p style="margin-left: 20px;">item : {{item}}</p>
 </div>
-    <table id="user">
-        <tr>
-            <th *ngFor = "let column of headers">
-                {{column}}
-            </th>
-</tr>
-<tr *ngFor="let row of rows">
-    <td *ngFor="let column of headers">
-        {{row[column]}}
-    </td>
-</tr>
-</table>
+<div>
+    <p style="margin-left:  20px;">result : {{result}}</p>
+</div>
+    <div *ngIf="item? item : false">
+        <div> 
+            <button>ذخیره</button>
         </div>
+            <table id="user">
+                <tr>
+                    <th *ngFor = "let column of headers">
+                        {{column}}
+                    </th>
+                </tr>
+                <tr *ngFor="let row of rows">
+                    <td *ngFor="let column of headers">
+                        {{row[column]}}
+                    </td>
+                </tr>
+            </table>
+    </div>

@@ -1,9 +1,9 @@
 
 <div style="display: contents;">
-    <p style="margin-left: 20px;">item : {{item}}</p>
+    <p *ngIf="!item" class="color: redColor"  style="margin-left: 20px;">item : {{item}}</p>
 </div>
 <div>
-    <p style="margin-left:  20px;">result : {{result}}</p>
+    <p  *ngIf="item" class="color: blueColor"  style="margin-left:  20px;">result : {{result}}</p>
 </div>
     <div *ngIf="item? item : false">
         <div> 
